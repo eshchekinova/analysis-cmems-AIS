@@ -38,16 +38,13 @@ def test_xr_time_coord_to_day_string():
     assert "2001-01-23" == xr_time_coord_to_day_string(
         xr.DataArray(pd.Timestamp("2001-01-23T01:23:45Z"))
     )
-def fun_vel_dir()
-
-    x =
-    return
 
 def reg_plot(dir_figures, lat_AIS, lon_AIS, draught,vsl_type, df_ocean_lense):
 
     # calculate ocean currents magnitude and direction
     mer_curr = df_ocean_lense['uo']
     zon_curr = df_ocean_lense['vo']
+    print(mer_curr)
     vel_curr = np.sqrt(mer_curr**2 + zon_curr**2)
     dir_curr = np.arcsin(zon_curr/mer_curr)
 
